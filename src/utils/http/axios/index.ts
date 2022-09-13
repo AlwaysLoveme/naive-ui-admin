@@ -220,7 +220,7 @@ const transform: AxiosTransform = {
         return;
       }
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error as string);
     }
     // 请求是否被取消
     const isCancel = axios.isCancel(error);

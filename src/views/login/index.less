@@ -1,0 +1,54 @@
+.view-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: auto;
+
+  &-container {
+    padding: 32px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px #fafafa;
+    border-radius: 8px;
+
+  }
+
+  &-top {
+    padding: 32px 0;
+    text-align: center;
+
+    &-logo {
+      margin: 0 auto 20px auto;
+      width: 160px;
+    }
+
+    &-desc {
+      font-size: 14px;
+      color: #808695;
+    }
+  }
+
+  .default-color {
+    color: #515a6e;
+
+    .ant-checkbox-wrapper {
+      color: #515a6e;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .view-account {
+    background-image: url('@/assets/images/login_.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+  }
+
+  .page-account-container {
+    padding: 32px 0 24px 0;
+  }
+}

@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig } = require('eslint-define-config');
+
 module.exports = defineConfig({
   root: true,
   env: {
@@ -18,11 +19,13 @@ module.exports = defineConfig({
     },
   },
   extends: [
+    'eslint:recommended',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:prettier/recommended',
   ],
+  plugins: ['vue', '@typescript-eslint'],
   rules: {
     'vue/script-setup-uses-vars': 'error',
     '@typescript-eslint/ban-ts-ignore': 'off',
@@ -38,14 +41,14 @@ module.exports = defineConfig({
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
-      'error',
+      'warn',
       {
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
       },
     ],
     'no-unused-vars': [
-      'error',
+      'warn',
       {
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
